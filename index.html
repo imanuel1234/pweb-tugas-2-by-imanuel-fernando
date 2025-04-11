@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Keren</title>
+</head>
+<body>
+    <header>
+        <h1>Profil Saya</h1>
+    </header>
+    <nav>
+        <a href="#bio">Biodata</a>
+        <a href="#multimedia">Multimedia</a>
+        <a href="#kontak">Kontak</a>
+    </nav>
+    <main>
+        <article id="bio" class="profile"> 
+            <img src="WhatsApp Image 2025-03-22 at 03.42.57.jpeg" alt="Foto Profil">
+            <h2>Imanuel Fernando</h2>
+            <p>Editor | Vloger | Content Creator | Gamers</p>
+            <p>Saya adalah seorang profesional di bidang teknologi dengan ketertarikan dalam desain web dan pengembangan aplikasi.</p>
+            <button onclick="lihatBiodata()">Lihat Biodata</button>
+            <button onclick="lihatKontak()">Kontak Informasi</button>
+            <button onclick="window.open('snack video.html', '_blank')">snack video</video></button>
+            <button onclick="window.open('facebook.html', '_blank')">Facebook</button>
+            <button onclick="window.open('twitter.html', '_blank')">Twitter</button>
+            
+
+        </article>
+        <section id="multimedia">
+            <h3>Video dan Audio</h3>
+            <video controls width="320">
+                <source src="video.mp4" type="video/mp4">
+                Browser Anda tidak mendukung tag video.
+            </video>
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+                Browser Anda tidak mendukung tag audio.
+            </audio>
+        </section>
+    </main>
+    <aside>
+        <h3>Informasi Tambahan</h3>
+        <p>Ini adalah konten tambahan.</p>
+    </aside>
+    <footer>
+        <h3>Formulir Data Diri</h3>
+        <form id="kontak" onsubmit="return submitForm(event)">
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama" required placeholder="Masukkan nama lengkap"><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Masukkan email aktif"><br>
+            
+            <label for="tgl">Tanggal Lahir:</label>
+            <input type="date" id="tgl" name="tgl" required><br>
+            
+            <label for="gender">Jenis Kelamin:</label>
+            <select id="gender" name="gender">
+                <option value="laki-laki">Laki-laki</option>
+                <option value="perempuan">Perempuan</option>
+                <option value="lainnya">Lainnya</option>
+            </select><br>
+            
+            <label for="bio">Biografi Singkat:</label>
+            <textarea id="bio" name="bio" required placeholder="Tulis sedikit tentang diri Anda"></textarea><br>
+            
+            <button type="submit">Kirim</button>
+        </form>
+        <p id="status"></p>
+    </footer>
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            document.getElementById('status').innerText = "Formulir berhasil dikirim!";
+        }
+        
+        function lihatBiodata() {
+            window.open('biodata.html', '_blank');
+        }
+        
+        function lihatKontak() {
+            window.open('jumlah folloer instagram.html', '_blank');
+        }
+    </script>
+</body>
+</html>
